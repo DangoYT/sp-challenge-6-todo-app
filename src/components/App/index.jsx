@@ -9,6 +9,7 @@ import CheckList from '../CheckList'
 import TasksLeft from '../TasksLeft'
 import Filters from '../Filters'
 import styles from './styles.module.css'
+import ClearAll from '../ClearALL/ClearAll';
 
 /**
  * Componente principal de la aplicación.
@@ -85,10 +86,22 @@ function App() {
         <Title theme={theme} changeTheme={changeTheme} />
         <TaskInput theme={theme} taskName={taskName} handleOnChange={handleOnChange} handleSubmit={handleSubmit} />
         <CheckList theme={theme} tasks={filteredTasks} deleteTask={deleteTask} updateTask={updateTask} />
+
+        <div>
+          <div className={`${styles.footer} ${theme === 'dark' ? styles.darkFooter : styles.lightFooter}`}>
+            <TasksLeft id={2} theme={theme} tasks={tasks} />
+            <ClearAll theme={theme} clearTasks={clearTasks} />
+          </div>
+        </div>
         <div className={`${styles.footer} ${theme === 'dark' ? styles.darkFooter : styles.lightFooter}`}>
+          <Filters theme={theme} filterAll={filterAll} filterActive={filterActive}
+            filterCompleted={filterCompleted} clearTasks={clearTasks} />
+        </div>
+        <div className={`${styles.footerDesktop} ${theme === 'dark' ? styles.darkFooter : styles.lightFooter}`}>
           <TasksLeft theme={theme} tasks={tasks} />
           <Filters theme={theme} filterAll={filterAll} filterActive={filterActive}
             filterCompleted={filterCompleted} clearTasks={clearTasks} />
+          <ClearAll theme={theme} clearTasks={clearTasks} />
         </div>
       </div>
     </main>
