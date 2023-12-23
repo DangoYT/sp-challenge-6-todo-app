@@ -40,7 +40,19 @@
     color: hsl(236, 9%, 61%);
 }
 
-@media screen and (max-width: 375px) {
-    .container__Clear{
+@media (max-width: 375px) {
+    .container__AllActiveCompleted{
+       position: absolute;
+       height: 60px;
+       width: 315px;
+       border-radius: 15px;
+       top: 50px;
+       right: -15px;
+       display: flex;
+       align-items: center;
+       padding: 0 80px;
+    }
+    .container {
+        width: 375px;
     }
 }

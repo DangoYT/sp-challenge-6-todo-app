@@ -27,3 +27,10 @@
     background-color: white;
     color: black;
 }
+
+@media screen and (max-width: 600px) {
+    .task {
+        font-size: 0.9rem;
+    }
+    
+}

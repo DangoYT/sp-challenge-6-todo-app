@@ -2,6 +2,9 @@
     max-width: 1440px;
     margin: 0 auto;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .dark {
@@ -40,11 +43,26 @@
 .lightFooter {
     background-color: white;
 }
+.footerDesktop {
+    width: 540px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 15px;
+}
 
 @media screen and (max-width: 375px) {
     .layout {
         max-width: 375px;
         height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .background {
         width: 375px;
@@ -57,16 +75,21 @@
     .darkFooter {
         width: 375px;
         display: flex;
-        margin-top: 20px;
     }
     .lightFooter {
         width: 375px;
-        margin-top: 20px;
     }
     .footer {
         width: 375px;
     }
     .footerDesktop {
-        display: none;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        height: 40px;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-left: 17.5px;
     }
 }

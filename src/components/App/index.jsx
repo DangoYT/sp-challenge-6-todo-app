@@ -87,21 +87,10 @@ function App() {
         <TaskInput theme={theme} taskName={taskName} handleOnChange={handleOnChange} handleSubmit={handleSubmit} />
         <CheckList theme={theme} tasks={filteredTasks} deleteTask={deleteTask} updateTask={updateTask} />
 
-        <div>
-          <div className={`${styles.footer} ${theme === 'dark' ? styles.darkFooter : styles.lightFooter}`}>
-            <TasksLeft id={2} theme={theme} tasks={tasks} />
-            <ClearAll theme={theme} clearTasks={clearTasks} />
-          </div>
-        </div>
-        <div className={`${styles.footer} ${theme === 'dark' ? styles.darkFooter : styles.lightFooter}`}>
-          <Filters theme={theme} filterAll={filterAll} filterActive={filterActive}
-            filterCompleted={filterCompleted} clearTasks={clearTasks} />
-        </div>
-        <div className={`${styles.footerDesktop} ${theme === 'dark' ? styles.darkFooter : styles.lightFooter}`}>
+       <div className={`${styles.footerDesktop} ${theme === 'dark' ? styles.darkFooter : styles.lightFooter}`}>
           <TasksLeft theme={theme} tasks={tasks} />
           <Filters theme={theme} filterAll={filterAll} filterActive={filterActive}
             filterCompleted={filterCompleted} clearTasks={clearTasks} />
-          <ClearAll theme={theme} clearTasks={clearTasks} />
         </div>
       </div>
     </main>
